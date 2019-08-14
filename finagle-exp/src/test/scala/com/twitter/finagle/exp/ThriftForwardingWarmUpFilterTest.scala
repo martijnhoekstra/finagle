@@ -6,10 +6,10 @@ import com.twitter.finagle.thrift.{ClientId, ThriftClientRequest}
 import com.twitter.util.{Future, Time}
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 import org.mockito.Matchers._
 import org.mockito.Mockito._
-import org.scalatest.mockito.MockitoSugar
+import org.scalatestplus.mockito.MockitoSugar
 
 @RunWith(classOf[JUnitRunner])
 class ThriftForwardingWarmUpFilterTest extends FunSuite with MockitoSugar {

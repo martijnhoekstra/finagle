@@ -7,7 +7,7 @@ import io.netty.channel.embedded.EmbeddedChannel
 import io.netty.handler.proxy.{ProxyHandler, ProxyConnectException => NettyProxyConnectException}
 import io.netty.util.concurrent.{Future, GenericFutureListener}
 import org.junit.runner.RunWith
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 import org.scalatest.{FunSuite, OneInstancePerTest}
 import java.net.InetSocketAddress
 

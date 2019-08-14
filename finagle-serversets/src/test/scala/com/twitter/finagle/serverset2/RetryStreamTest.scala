@@ -4,7 +4,7 @@ import com.twitter.finagle.service.Backoff
 import com.twitter.util.Duration
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class RetryStreamTest extends FunSuite {

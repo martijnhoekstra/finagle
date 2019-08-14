@@ -9,7 +9,7 @@ import com.twitter.io.Buf
 import com.twitter.util.{Await, Awaitable}
 import java.net.{InetAddress, InetSocketAddress}
 import org.junit.runner.RunWith
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 import org.scalatest.{BeforeAndAfter, FunSuite}
 
 @RunWith(classOf[JUnitRunner])

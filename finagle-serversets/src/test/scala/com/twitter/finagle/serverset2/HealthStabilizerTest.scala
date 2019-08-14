@@ -6,7 +6,7 @@ import com.twitter.finagle.stats.InMemoryStatsReceiver
 import com.twitter.util._
 import org.junit.runner.RunWith
 import org.scalatest.{BeforeAndAfter, FunSuite}
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 import java.util.concurrent.atomic.AtomicReference
 
 @RunWith(classOf[JUnitRunner])

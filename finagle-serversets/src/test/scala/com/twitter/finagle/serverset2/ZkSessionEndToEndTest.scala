@@ -9,7 +9,7 @@ import com.twitter.io.Buf
 import com.twitter.util._
 import org.junit.runner.RunWith
 import org.scalatest.concurrent.Eventually._
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 import org.scalatest.time._
 import org.scalatest.{BeforeAndAfter, FunSuite}
 

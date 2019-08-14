@@ -2,7 +2,7 @@ package com.twitter.finagle.zipkin.core
 
 import org.scalatest.FunSuite
 import com.twitter.util.Time
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 import org.junit.runner.RunWith
 
 @RunWith(classOf[JUnitRunner])

@@ -3,7 +3,7 @@ package com.twitter.finagle.memcached.unit.util
 import com.twitter.finagle.memcached.util.NotFound
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 import scala.collection.immutable.SortedSet
 
 @RunWith(classOf[JUnitRunner])

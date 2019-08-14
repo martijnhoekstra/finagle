@@ -86,7 +86,7 @@ private[serverset2] class ApacheZooKeeper private[apache] (zk: zookeeper.ZooKeep
     val cb = new VoidCallback {
       def processResult(ret: Int, path: String, ctx: Object) =
         ApacheKeeperException(ret, Option(path)) match {
-          case None => rv.setValue(Unit)
+          case None => rv.setValue(())
           case Some(e) => rv.setException(e)
         }
     }
@@ -260,7 +260,7 @@ private[serverset2] class ApacheZooKeeper private[apache] (zk: zookeeper.ZooKeep
         stat: zookeeper.data.Stat
       ) =
         ApacheKeeperException(ret, Option(path)) match {
-          case None => rv.setValue(Node.Children(children.asScala, ApacheData.Stat(stat)))
+          case None => rv.setValue(Node.Children(children.asScala.toSeq, ApacheData.Stat(stat)))
           case Some(e) => rv.setException(e)
         }
     }
@@ -287,7 +287,7 @@ private[serverset2] class ApacheZooKeeper private[apache] (zk: zookeeper.ZooKeep
         ApacheKeeperException(ret, Option(path)) match {
           case None =>
             rv.setValue(
-              Watched(Node.Children(children.asScala, ApacheData.Stat(stat)), watcher.state)
+              Watched(Node.Children(children.asScala.toSeq, ApacheData.Stat(stat)), watcher.state)
             )
           case Some(e) => rv.setException(e)
         }
@@ -306,7 +306,7 @@ private[serverset2] class ApacheZooKeeper private[apache] (zk: zookeeper.ZooKeep
     val cb = new VoidCallback {
       def processResult(ret: Int, path: String, ctx: Object) =
         ApacheKeeperException(ret, Option(path)) match {
-          case None => rv.setValue(Unit)
+          case None => rv.setValue(())
           case Some(e) => rv.setException(e)
         }
     }

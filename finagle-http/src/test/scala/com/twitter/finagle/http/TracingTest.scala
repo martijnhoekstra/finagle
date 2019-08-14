@@ -7,11 +7,11 @@ import com.twitter.util.{Await, Future}
 import org.junit.runner.RunWith
 import org.scalacheck.Gen
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
-import org.scalatest.prop.GeneratorDrivenPropertyChecks
+import org.scalatestplus.junit.JUnitRunner
+import org.scalatestplus.scalacheck.ScalaCheckDrivenPropertyChecks
 
 @RunWith(classOf[JUnitRunner])
-class TracingTest extends FunSuite with GeneratorDrivenPropertyChecks {
+class TracingTest extends FunSuite with ScalaCheckDrivenPropertyChecks {
 
   import HttpTracing.{Header, stripParameters}
 

@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicReference
 import org.junit.runner.RunWith
 import org.scalatest.concurrent.{Eventually, IntegrationPatience}
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 import scala.collection.immutable
 
 sealed private trait ZkOp { type Res; val res = new Promise[Res] }

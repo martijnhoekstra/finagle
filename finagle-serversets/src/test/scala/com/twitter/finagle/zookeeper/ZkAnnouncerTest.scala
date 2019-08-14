@@ -9,7 +9,7 @@ import org.junit.runner.RunWith
 import org.scalactic.source.Position
 import org.scalatest.concurrent.Eventually._
 import org.scalatest.exceptions.TestFailedDueToTimeoutException
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 import org.scalatest.time._
 import org.scalatest.{BeforeAndAfter, FunSuite, Tag}
 

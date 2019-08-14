@@ -6,7 +6,7 @@ import com.twitter.finagle.{Service, ServiceFactory, Stack}
 import com.twitter.util.{Await, Promise, Future}
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class TlsFilterTest extends FunSuite {

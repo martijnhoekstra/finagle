@@ -3,7 +3,7 @@ package com.twitter.finagle.http
 import com.twitter.finagle.tracing._
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class TraceInfoTest extends FunSuite {

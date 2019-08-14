@@ -3,7 +3,7 @@ package com.twitter.finagle.http
 import java.util.Date
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 /**
  * Test battery that all `HeaderMap` types should pass.
@@ -89,7 +89,7 @@ abstract class AbstractHeaderMapTest extends FunSuite {
     assert(map.getAll("a").toSet == Set("3"))
     assert(map.iterator.toSet == Set(("a" -> "3"), ("b" -> "2")))
 
-    map += "date" -> date
+    map.set += "date" -> date
     assert(map.getAll("date") == Seq(formattedDate))
   }
 

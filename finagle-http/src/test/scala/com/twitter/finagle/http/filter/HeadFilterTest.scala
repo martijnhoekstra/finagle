@@ -5,7 +5,7 @@ import com.twitter.finagle.http.{Method, Request, Response, Status}
 import com.twitter.util.{Await, Future}
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class HeadFilterTest extends FunSuite {

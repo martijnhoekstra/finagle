@@ -7,7 +7,7 @@ import com.twitter.util.{Await, Closable, Future}
 import java.net.{InetAddress, InetSocketAddress}
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 private object Svc extends Service[Request, Response] {
   def apply(req: Request) = Future.value(req.response)

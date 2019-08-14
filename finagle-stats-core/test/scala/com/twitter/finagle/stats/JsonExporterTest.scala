@@ -9,7 +9,7 @@ import java.io.{BufferedWriter, File, FileOutputStream, OutputStreamWriter}
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
 import org.scalatest.concurrent.{Eventually, IntegrationPatience}
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 import scala.util.matching.Regex
 
 @RunWith(classOf[JUnitRunner])

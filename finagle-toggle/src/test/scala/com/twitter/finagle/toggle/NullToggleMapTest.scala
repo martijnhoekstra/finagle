@@ -3,11 +3,11 @@ package com.twitter.finagle.toggle
 import org.junit.runner.RunWith
 import org.scalacheck.Arbitrary.arbitrary
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
-import org.scalatest.prop.GeneratorDrivenPropertyChecks
+import org.scalatestplus.junit.JUnitRunner
+import org.scalatestplus.scalacheck.ScalaCheckDrivenPropertyChecks
 
 @RunWith(classOf[JUnitRunner])
-class NullToggleMapTest extends FunSuite with GeneratorDrivenPropertyChecks {
+class NullToggleMapTest extends FunSuite with ScalaCheckDrivenPropertyChecks {
 
   private val IntGen = arbitrary[Int]
 

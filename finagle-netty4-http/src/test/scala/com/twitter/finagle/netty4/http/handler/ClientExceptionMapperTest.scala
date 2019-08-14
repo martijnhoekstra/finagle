@@ -6,7 +6,7 @@ import io.netty.handler.codec.DecoderResult
 import io.netty.handler.codec.http.{DefaultHttpContent, HttpContent}
 import org.junit.runner.RunWith
 import org.scalatest.{FunSuite, OneInstancePerTest}
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class ClientExceptionMapperTest extends FunSuite with OneInstancePerTest {

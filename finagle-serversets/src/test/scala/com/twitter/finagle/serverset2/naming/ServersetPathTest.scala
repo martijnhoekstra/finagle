@@ -2,7 +2,7 @@ package com.twitter.finagle.serverset2.naming
 
 import com.twitter.finagle.Path
 import org.junit.runner.RunWith
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 import org.scalatest.FunSuite
 
 @RunWith(classOf[JUnitRunner])

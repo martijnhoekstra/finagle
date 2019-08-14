@@ -9,7 +9,7 @@ import io.netty.handler.codec.http._
 import java.nio.channels.ClosedChannelException
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class PayloadSizeHandlerTest extends FunSuite {

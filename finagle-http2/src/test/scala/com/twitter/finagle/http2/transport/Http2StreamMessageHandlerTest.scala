@@ -8,8 +8,8 @@ import io.netty.util.ReferenceCounted
 import org.scalatest.FunSuite
 import org.mockito.Mockito.when
 import org.scalacheck.Gen
-import org.scalatest.mockito.MockitoSugar
-import org.scalatest.prop.GeneratorDrivenPropertyChecks
+import org.scalatestplus.mockito.MockitoSugar
+import org.scalatestplus.scalacheck.ScalaCheckDrivenPropertyChecks
 
 class Http2StreamMessageHandlerTest
     extends FunSuite

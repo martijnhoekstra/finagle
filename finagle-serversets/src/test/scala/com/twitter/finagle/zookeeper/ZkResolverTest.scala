@@ -9,7 +9,7 @@ import java.net.InetSocketAddress
 import org.junit.runner.RunWith
 import org.scalatest.{BeforeAndAfter, FunSuite}
 import org.scalatest.concurrent.Eventually._
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 import org.scalatest.time._
 import scala.collection.JavaConverters._
 

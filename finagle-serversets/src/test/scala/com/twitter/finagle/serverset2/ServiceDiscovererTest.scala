@@ -16,9 +16,9 @@ import com.twitter.util._
 import org.junit.runner.RunWith
 import org.mockito.Mockito.when
 import org.scalatest.concurrent.{Eventually, IntegrationPatience}
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 import org.scalatest.FunSuite
-import org.scalatest.mockito.MockitoSugar
+import org.scalatestplus.mockito.MockitoSugar
 import java.util.concurrent.atomic.AtomicReference
 
 @RunWith(classOf[JUnitRunner])

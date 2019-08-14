@@ -3,13 +3,13 @@ package com.twitter.finagle.http.path
 import com.twitter.finagle.http.{Method, ParamMap}
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
-import org.scalatest.prop.GeneratorDrivenPropertyChecks
+import org.scalatestplus.junit.JUnitRunner
 import org.scalacheck.Gen
+import org.scalatestplus.scalacheck.ScalaCheckDrivenPropertyChecks
 import scala.util.Random
 
 @RunWith(classOf[JUnitRunner])
-class PathTest extends FunSuite with GeneratorDrivenPropertyChecks {
+class PathTest extends FunSuite with ScalaCheckDrivenPropertyChecks {
 
   def alpha(min: Int, max: Int) =
     for {

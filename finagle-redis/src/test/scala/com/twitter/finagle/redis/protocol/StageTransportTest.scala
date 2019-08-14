@@ -9,7 +9,7 @@ import com.twitter.util.Await
 import org.junit.runner.RunWith
 import org.scalacheck.Gen
 import org.scalatest.OneInstancePerTest
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class StageTransportTest extends RedisResponseTest with OneInstancePerTest {

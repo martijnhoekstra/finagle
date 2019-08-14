@@ -11,7 +11,7 @@ import org.junit.runner.RunWith
 import org.scalactic.source.Position
 import org.scalatest.concurrent.Eventually
 import org.scalatest.concurrent.PatienceConfiguration
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 import org.scalatest.time.{Span, SpanSugar}
 import org.scalatest.{FunSuite, BeforeAndAfter, Tag}
 import scala.collection.JavaConverters.mapAsJavaMapConverter

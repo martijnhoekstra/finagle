@@ -6,7 +6,7 @@ import com.twitter.finagle.http.path._
 import com.twitter.util.Await
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class RoutingServiceTest extends FunSuite {

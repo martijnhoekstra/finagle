@@ -4,7 +4,7 @@ import com.twitter.finagle.redis.{RedisResponseTest, ServerError}
 import com.twitter.finagle.redis.protocol._
 import com.twitter.io.Buf
 import org.junit.runner.RunWith
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class ReplyDecodingTest extends RedisResponseTest {

@@ -3,7 +3,7 @@ package com.twitter.finagle.serverset2
 import com.twitter.finagle.stats.NullStatsReceiver
 import com.twitter.util.Future
 import org.junit.runner.RunWith
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 import org.scalatest.FunSuite
 
 @RunWith(classOf[JUnitRunner])

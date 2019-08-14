@@ -2,7 +2,7 @@ package com.twitter.finagle.memcached.unit.util
 
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 import com.twitter.finagle.memcached.util.Bufs.RichBuf
 import com.twitter.io.Buf

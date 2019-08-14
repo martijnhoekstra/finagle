@@ -4,8 +4,8 @@ import io.netty.channel.embedded.EmbeddedChannel
 import io.netty.handler.codec.http._
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.mockito.MockitoSugar
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.mockito.MockitoSugar
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class TextualContentCompressorTest extends FunSuite with MockitoSugar {

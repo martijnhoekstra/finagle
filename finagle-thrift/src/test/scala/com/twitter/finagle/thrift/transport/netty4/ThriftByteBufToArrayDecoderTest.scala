@@ -5,7 +5,7 @@ import io.netty.channel.embedded.EmbeddedChannel
 import java.nio.charset.StandardCharsets
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class ThriftByteBufToArrayDecoderTest extends FunSuite {

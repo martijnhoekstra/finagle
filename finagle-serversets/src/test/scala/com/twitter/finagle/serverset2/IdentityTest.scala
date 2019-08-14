@@ -2,7 +2,7 @@ package com.twitter.finagle.serverset2
 
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 class TestIdentity extends Identity {
   val scheme = "test"
