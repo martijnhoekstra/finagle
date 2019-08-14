@@ -7,7 +7,7 @@ import java.net.InetSocketAddress
 import javax.net.ssl.SSLContext
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class SslContextClientEngineFactoryTest extends FunSuite {

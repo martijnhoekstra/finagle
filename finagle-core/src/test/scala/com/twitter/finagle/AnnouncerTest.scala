@@ -4,7 +4,7 @@ import com.twitter.util.{Await, Future}
 import java.net.{InetAddress, InetSocketAddress}
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 case class TestAnnouncement(ia: InetSocketAddress, addr: String) extends Announcement {
   def unannounce() = Future.Done

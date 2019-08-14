@@ -4,11 +4,11 @@ import com.twitter.util.{Time, Duration, Return}
 import org.junit.runner.RunWith
 import org.scalacheck.Gen
 import org.scalatest.FunSuite
-import org.scalatest.junit.{AssertionsForJUnit, JUnitRunner}
-import org.scalatest.prop.GeneratorDrivenPropertyChecks
+import org.scalatestplus.junit.{AssertionsForJUnit, JUnitRunner}
+import org.scalatestplus.scalacheck.ScalaCheckDrivenPropertyChecks
 
 @RunWith(classOf[JUnitRunner])
-class DeadlineTest extends FunSuite with AssertionsForJUnit with GeneratorDrivenPropertyChecks {
+class DeadlineTest extends FunSuite with AssertionsForJUnit with ScalaCheckDrivenPropertyChecks {
 
   val time = for (t <- Gen.choose(0L, Long.MaxValue)) yield Time.fromNanoseconds(t)
   val dur = for (d <- Gen.choose(0L, Long.MaxValue)) yield Duration.fromNanoseconds(d)

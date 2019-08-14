@@ -5,7 +5,7 @@ import com.twitter.util.Var
 import com.twitter.util.registry.{Entry, GlobalRegistry, SimpleRegistry}
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 case class TestParam(p1: Int) {
   def mk() = (this, TestParam.param)

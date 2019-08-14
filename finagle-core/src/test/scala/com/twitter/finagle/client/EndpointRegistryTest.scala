@@ -5,7 +5,7 @@ import com.twitter.finagle.Namer.AddrWeightKey
 import com.twitter.util.Var
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 final class EndpointRegistryTest extends FunSuite {

@@ -4,7 +4,7 @@ import com.twitter.conversions.DurationOps._
 import com.twitter.util.{Await, Closable, Future, Time}
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class RefcountedClosableTest extends FunSuite {

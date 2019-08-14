@@ -7,14 +7,14 @@ import com.twitter.util.{MockTimer, Time}
 import org.scalacheck.Gen
 import org.scalatest.FunSuite
 import org.scalatest.concurrent.{Eventually, IntegrationPatience}
-import org.scalatest.prop.GeneratorDrivenPropertyChecks
+import org.scalatestplus.scalacheck.ScalaCheckDrivenPropertyChecks
 import scala.collection.mutable
 
 class WindowedPercentileHistogramTest
     extends FunSuite
     with Eventually
     with IntegrationPatience
-    with GeneratorDrivenPropertyChecks {
+    with ScalaCheckDrivenPropertyChecks {
 
   test("Throws IllegalArgumentException when retrieving a percentile < 0") {
     val wp = new WindowedPercentileHistogram(10, 10.seconds, new MockTimer)
@@ -306,7 +306,7 @@ class WindowedPercentileHistogramTest
       eventually {
         assert(
           wp.toBucketAndCounts().toSet == generateBucketAndCounts(
-            listOfInputsToCreateBucketAndCounts,
+            listOfInputsToCreateBucketAndCounts.toSeq,
             10000,
             wp).toSet)
       }

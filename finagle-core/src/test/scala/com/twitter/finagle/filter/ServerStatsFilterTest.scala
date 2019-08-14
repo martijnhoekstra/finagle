@@ -6,7 +6,7 @@ import com.twitter.util.{Stopwatch, Time, Future}
 import com.twitter.conversions.DurationOps._
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class ServerStatsFilterTest extends FunSuite {

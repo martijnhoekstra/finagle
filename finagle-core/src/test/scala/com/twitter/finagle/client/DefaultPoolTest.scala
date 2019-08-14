@@ -5,7 +5,7 @@ import com.twitter.finagle.stats.InMemoryStatsReceiver
 import com.twitter.util.{Return, Await, Future, Time}
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class DefaultPoolTest extends FunSuite {

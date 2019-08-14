@@ -3,7 +3,7 @@ package com.twitter.finagle.util
 import org.junit.runner.RunWith
 import org.scalactic.Tolerance
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class EmaTest extends FunSuite {

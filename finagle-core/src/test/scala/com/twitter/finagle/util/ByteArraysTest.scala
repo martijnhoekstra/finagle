@@ -2,7 +2,7 @@ package com.twitter.finagle.util
 
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class ByteArraysTest extends FunSuite {

@@ -12,7 +12,7 @@ import com.twitter.finagle.{
 import com.twitter.util._
 import org.junit.runner.RunWith
 import org.scalatest.FunSpec
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class RetryPolicyTest extends FunSpec {

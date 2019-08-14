@@ -7,7 +7,7 @@ import com.twitter.finagle.stats.InMemoryStatsReceiver
 import com.twitter.util.{MockTimer, Time}
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 import StabilizingAddr.State._
 
 class MockHealth {

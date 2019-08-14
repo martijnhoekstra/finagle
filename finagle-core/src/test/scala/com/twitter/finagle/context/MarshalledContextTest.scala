@@ -3,7 +3,7 @@ package com.twitter.finagle.context
 import com.twitter.io.Buf
 import com.twitter.util.{Return, Throw}
 import org.junit.runner.RunWith
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class MarshalledContextTest extends AbstractContextTest {
@@ -99,7 +99,10 @@ class MarshalledContextTest extends AbstractContextTest {
       checkKey(a)
       checkKey(b)
 
-      assert(ctx.marshal(roundTrip) == ctx.marshal())
+      val marshallRoundtrip = ctx.marshal(roundTrip)
+      val marshallDirect = ctx.marshal()
+
+      assert(marshallRoundtrip.iterator.sameElements(marshallDirect.iterator))
     }
   }
 }

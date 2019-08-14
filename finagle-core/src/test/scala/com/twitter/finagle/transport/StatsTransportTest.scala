@@ -5,7 +5,7 @@ import com.twitter.finagle.stats.{CategorizingExceptionStatsHandler, InMemorySta
 import com.twitter.util.{Await, Future}
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class StatsTransportTest extends FunSuite {

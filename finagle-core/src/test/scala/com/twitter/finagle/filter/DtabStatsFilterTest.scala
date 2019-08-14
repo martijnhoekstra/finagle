@@ -2,7 +2,7 @@ package com.twitter.finagle.filter
 
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.{AssertionsForJUnit, JUnitRunner}
+import org.scalatestplus.junit.{AssertionsForJUnit, JUnitRunner}
 import com.twitter.finagle.stats.InMemoryStatsReceiver
 import com.twitter.finagle.{Dtab, Service}
 import com.twitter.util.{Await, Future}

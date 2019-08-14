@@ -2,7 +2,7 @@ package com.twitter.finagle;
 
 import java.util.Set;
 
-import scala.collection.JavaConversions;
+import scala.collection.JavaConverters;
 
 /**
  * Java compatibility for the {@link FailureFlags} companion object.
@@ -35,12 +35,12 @@ public final class JavaFailureFlags {
 
   /** See `FailureFlags.flagsOf` */
   public static Set<String> flagsOf(long flags) {
-    return JavaConversions.setAsJavaSet(FailureFlags$.MODULE$.flagsOf(flags));
+    return JavaConverters.setAsJavaSet(FailureFlags$.MODULE$.flagsOf(flags));
   }
 
   /** See `FailureFlags.flagsOf` */
   public static Set<String> flagsOf(Throwable t) {
-    return JavaConversions.setAsJavaSet(FailureFlags$.MODULE$.flagsOf(t));
+    return JavaConverters.setAsJavaSet(FailureFlags$.MODULE$.flagsOf(t));
   }
 
   /** See `FailureFlags.isFlagged` */

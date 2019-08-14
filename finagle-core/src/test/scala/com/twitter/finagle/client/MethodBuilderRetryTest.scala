@@ -8,7 +8,7 @@ import com.twitter.finagle.{Failure, FailureFlags, Service, ServiceFactory, Stac
 import com.twitter.util.{Await, Future, Throw}
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class MethodBuilderRetryTest extends FunSuite {

@@ -3,7 +3,7 @@ package com.twitter.finagle.naming
 import com.twitter.finagle._
 import com.twitter.util.Activity
 import org.junit.runner.RunWith
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 import org.scalatest.{BeforeAndAfter, FunSuite}
 
 @RunWith(classOf[JUnitRunner])

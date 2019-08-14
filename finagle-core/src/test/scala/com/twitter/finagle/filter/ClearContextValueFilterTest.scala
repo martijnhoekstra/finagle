@@ -7,7 +7,7 @@ import com.twitter.finagle.stack.nilStack
 import com.twitter.util.{Promise, Await, Future}
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class ClearContextValueFilterTest extends FunSuite {
@@ -66,7 +66,7 @@ class ClearContextValueFilterTest extends FunSuite {
         .make(Stack.Params.empty)
 
       val svc: Service[Unit, Unit] = Await.result(factory(), 1.second)
-      Await.result(svc(), 1.second)
+      Await.result(svc(()), 1.second)
       assert(setContextFilterCalled.isDefined)
       assert(verifyContextClearedFilterCalled.isDefined)
     }
@@ -81,7 +81,7 @@ class ClearContextValueFilterTest extends FunSuite {
         .make(Stack.Params.empty)
 
       val svc: Service[Unit, Unit] = Await.result(factory(), 1.second)
-      Await.result(svc(), 1.second)
+      Await.result(svc(()), 1.second)
       assert(verifyContextClearedFilterCalled.isDefined)
     }
   }

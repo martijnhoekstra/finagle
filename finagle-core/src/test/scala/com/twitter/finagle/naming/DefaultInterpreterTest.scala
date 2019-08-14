@@ -4,7 +4,7 @@ import com.twitter.finagle._
 import com.twitter.finagle.Namer.AddrWeightKey
 import com.twitter.util.{Activity, Var}
 import org.junit.runner.RunWith
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 import org.scalatest.FunSuite
 
 class testnamer extends Namer {

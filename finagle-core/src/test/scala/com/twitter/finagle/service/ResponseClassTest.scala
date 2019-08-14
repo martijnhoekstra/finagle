@@ -2,7 +2,7 @@ package com.twitter.finagle.service
 
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class ResponseClassTest extends FunSuite {

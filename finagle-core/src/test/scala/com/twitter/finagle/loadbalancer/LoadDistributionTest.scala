@@ -6,7 +6,7 @@ import com.twitter.finagle.service.ConstantService
 import com.twitter.finagle.util.Rng
 import com.twitter.util.{Activity, Await, Future, Time, Var}
 import org.junit.runner.RunWith
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 import org.scalatest.{FunSuite, OneInstancePerTest}
 import scala.util.Random
 

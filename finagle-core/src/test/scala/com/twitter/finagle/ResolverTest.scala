@@ -3,7 +3,7 @@ package com.twitter.finagle
 import com.twitter.util.{Future, Time, Var}
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 object TestAddr {
   case class StringFactory(s: String) extends ServiceFactory[Any, String] {

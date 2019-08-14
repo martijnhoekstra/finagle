@@ -7,7 +7,7 @@ import com.twitter.finagle.stack.nilStack
 import com.twitter.finagle.stats.{InMemoryStatsReceiver, StatsReceiver}
 import com.twitter.util.{Await, Future}
 import org.junit.runner.RunWith
-import org.scalatest.junit.{AssertionsForJUnit, JUnitRunner}
+import org.scalatestplus.junit.{AssertionsForJUnit, JUnitRunner}
 import org.scalatest.FunSuite
 
 @RunWith(classOf[JUnitRunner])

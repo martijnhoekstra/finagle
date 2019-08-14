@@ -6,7 +6,7 @@ import com.twitter.finagle.naming.namerMaxDepth
 import com.twitter.util._
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.{AssertionsForJUnit, JUnitRunner}
+import org.scalatestplus.junit.{AssertionsForJUnit, JUnitRunner}
 import scala.language.reflectiveCalls
 
 @RunWith(classOf[JUnitRunner])

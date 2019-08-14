@@ -4,7 +4,7 @@ import com.twitter.finagle.{Status, ClientConnection, Service, ServiceFactory, F
 import com.twitter.util._
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class DelayedFactoryTest extends FunSuite {

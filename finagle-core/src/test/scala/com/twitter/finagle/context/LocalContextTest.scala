@@ -1,7 +1,7 @@
 package com.twitter.finagle.context
 
 import org.junit.runner.RunWith
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class LocalContextTest extends AbstractContextTest {

@@ -7,7 +7,7 @@ import com.twitter.util.{Await, Promise, Future}
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
 import org.scalatest.OneInstancePerTest
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class PendingRequestFilterTest extends FunSuite with OneInstancePerTest {

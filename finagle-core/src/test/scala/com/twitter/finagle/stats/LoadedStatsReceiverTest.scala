@@ -2,7 +2,7 @@ package com.twitter.finagle.stats
 
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class LoadedStatsReceiverTest extends FunSuite {

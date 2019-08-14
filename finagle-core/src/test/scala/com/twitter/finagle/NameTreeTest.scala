@@ -3,7 +3,7 @@ package com.twitter.finagle
 import com.twitter.finagle.naming.{DefaultInterpreter, NamerExceededMaxDepthException}
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 import scala.util.Random
 import scala.util.control.NonFatal
 
