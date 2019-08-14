@@ -1,7 +1,7 @@
 package com.twitter.finagle
 
 import org.scalatest.{FunSuite, Assertion}
-import org.scalatest.junit.AssertionsForJUnit
+import org.scalatestplus.junit.AssertionsForJUnit
 
 class DtabTest extends FunSuite with AssertionsForJUnit {
 
@@ -77,10 +77,10 @@ class DtabTest extends FunSuite with AssertionsForJUnit {
     b += Dentry.read("/c => /d")
     val dtab = b.result
 
-    val dtab1: Dtab = dtab map {
+    val dtab1: Dtab = Dtab(dtab.map(e => e match {
       case Dentry(a, b) =>
         Dentry.read("%s=>%s".format(a.show.toUpperCase, b.show.toUpperCase))
-    }
+    }))
 
     assert(dtab1.size == 2)
     dtab1(0) match {

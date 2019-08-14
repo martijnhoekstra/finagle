@@ -158,7 +158,7 @@ object FailureDetector {
    */
   private def parseConfigFromFlags(
     ping: () => Future[Unit],
-    nanoTime: () => Long = System.nanoTime,
+    nanoTime: () => Long = () => System.nanoTime(),
     statsReceiver: StatsReceiver = NullStatsReceiver
   ): FailureDetector = {
     sessionFailureDetector() match {

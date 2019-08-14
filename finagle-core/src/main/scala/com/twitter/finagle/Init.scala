@@ -110,9 +110,9 @@ private[twitter] object Init {
 
     // Use state at time of callback creation in Interruptible
     // Evaluate toggle every minute so we can change the behavior at runtime.
-    DefaultTimer.schedule(1.minute) {
-      Promise.useLocalInInterruptible(useLocalInInterruptible(ServerInfo().id.hashCode()))
-    }
+    //DefaultTimer.schedule(1.minute) {
+    //  Promise.useLocalInInterruptible(useLocalInInterruptible(ServerInfo().id.hashCode()))
+    //}
 
     val p = loadBuildProperties.getOrElse { new Properties() }
 
