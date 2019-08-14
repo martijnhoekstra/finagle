@@ -38,11 +38,11 @@ class P2CPeakEwmaTest extends FunSuite with P2CSuite {
           val svc = Await.result(bal())
           val latency = Await.result(svc((): Unit)).toLong
           val work = clock() + latency -> (schedule.getOrElse(clock() + latency, Nil) :+ svc)
-          schedule + work
+          schedule += work
         }
       for (seq <- next.get(step); c <- seq) c.close()
       clock.advance(1)
-      go(step + 1, next - step)
+      go(step + 1, next -= step)
     }
     go(0, SortedMap())
   }

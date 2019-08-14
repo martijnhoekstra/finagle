@@ -114,6 +114,7 @@ def gcJavaOptions: Seq[String] = {
     "-Xmx3G"
   )
 }
+
 val with213 = Seq(crossScalaVersions += "2.13.0")
 
 val sharedSettings = Seq(
