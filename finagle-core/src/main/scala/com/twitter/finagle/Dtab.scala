@@ -261,7 +261,7 @@ object Dentry {
 /**
  * Object Dtab manages 'base' and 'local' Dtabs.
  */
-trait DtabCompanionBase {
+private[finagle] trait DtabCompanionBase {
   implicit val equiv: Equiv[Dtab] = new Equiv[Dtab] {
     def equiv(d1: Dtab, d2: Dtab): Boolean = (
       d1.size == d2.size &&
