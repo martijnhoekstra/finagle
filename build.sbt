@@ -348,7 +348,8 @@ lazy val finagleToggle = Project(
   id = "finagle-toggle",
   base = file("finagle-toggle")
 ).settings(
-  sharedSettings
+  sharedSettings,
+  with213
 ).settings(
   name := "finagle-toggle",
   libraryDependencies ++= Seq(
