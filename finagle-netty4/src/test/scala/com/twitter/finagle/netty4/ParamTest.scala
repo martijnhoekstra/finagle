@@ -2,7 +2,7 @@ package com.twitter.finagle.netty4
 
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 import com.twitter.finagle.Stack
 
 @RunWith(classOf[JUnitRunner])

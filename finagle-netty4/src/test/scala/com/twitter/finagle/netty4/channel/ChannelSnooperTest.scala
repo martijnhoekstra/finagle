@@ -7,8 +7,8 @@ import java.net.InetSocketAddress
 import org.junit.runner.RunWith
 import org.mockito.Mockito.when
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
-import org.scalatest.mockito.MockitoSugar
+import org.scalatestplus.junit.JUnitRunner
+import org.scalatestplus.mockito.MockitoSugar
 
 @RunWith(classOf[JUnitRunner])
 class ChannelSnooperTest extends FunSuite with MockitoSugar {

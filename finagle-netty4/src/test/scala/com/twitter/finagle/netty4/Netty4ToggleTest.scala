@@ -5,7 +5,7 @@ import com.twitter.finagle.toggle.flag
 import java.net.SocketAddress
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class Netty4ToggleTest extends FunSuite {
