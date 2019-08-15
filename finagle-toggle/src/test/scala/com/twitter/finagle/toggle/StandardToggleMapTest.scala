@@ -5,7 +5,7 @@ import com.twitter.finagle.stats.{InMemoryStatsReceiver, NullStatsReceiver}
 import java.util.concurrent.{ConcurrentHashMap, ConcurrentMap}
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 import scala.collection.JavaConverters._
 
 @RunWith(classOf[JUnitRunner])
