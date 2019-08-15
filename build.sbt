@@ -318,7 +318,8 @@ lazy val finagleInit = Project(
   id = "finagle-init",
   base = file("finagle-init")
 ).settings(
-  sharedSettings
+  sharedSettings,
+  with213
 ).settings(
   name := "finagle-init"
 )
