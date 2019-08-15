@@ -35,12 +35,14 @@ public final class JavaFailureFlags {
 
   /** See `FailureFlags.flagsOf` */
   public static Set<String> flagsOf(long flags) {
-    return JavaConverters.setAsJavaSet(FailureFlags$.MODULE$.flagsOf(flags));
+    scala.collection.Set<String> sflags = FailureFlags$.MODULE$.flagsOf(flags);
+    return JavaConverters.setAsJavaSetConverter(sflags).asJava();
   }
 
   /** See `FailureFlags.flagsOf` */
   public static Set<String> flagsOf(Throwable t) {
-    return JavaConverters.setAsJavaSet(FailureFlags$.MODULE$.flagsOf(t));
+    scala.collection.Set<String> sflags = FailureFlags$.MODULE$.flagsOf(t);
+    return JavaConverters.setAsJavaSetConverter(sflags).asJava();
   }
 
   /** See `FailureFlags.isFlagged` */
