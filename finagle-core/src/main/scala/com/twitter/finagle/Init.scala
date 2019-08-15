@@ -1,15 +1,14 @@
 package com.twitter.finagle
 
 import com.twitter.concurrent.Once
-import com.twitter.conversions.DurationOps._
 import com.twitter.finagle.exp.FinagleScheduler
 import com.twitter.finagle.loadbalancer.aperture
 import com.twitter.finagle.loadbalancer.aperture.ProcessCoordinate.FromInstanceId
 import com.twitter.finagle.stats.{DefaultStatsReceiver, FinagleStatsReceiver}
-import com.twitter.finagle.server.{ServerInfo, StackServer}
-import com.twitter.finagle.util.{DefaultLogger, DefaultTimer, LoadService}
+import com.twitter.finagle.server.StackServer
+import com.twitter.finagle.util.{DefaultLogger, LoadService}
 import com.twitter.jvm.JvmStats
-import com.twitter.util.{FuturePool, Promise}
+import com.twitter.util.FuturePool
 import java.util.concurrent.atomic.AtomicReference
 import java.util.logging.Level
 import java.util.Properties

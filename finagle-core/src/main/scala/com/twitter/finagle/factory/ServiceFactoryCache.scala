@@ -8,7 +8,6 @@ import java.util
 import java.util.concurrent.atomic.AtomicInteger
 import java.util.concurrent.locks.StampedLock
 import scala.collection.JavaConverters._
-import scala.collection.mutable.ListBuffer
 import scala.collection.immutable.VectorBuilder
 
 /**
