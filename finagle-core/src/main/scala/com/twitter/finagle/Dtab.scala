@@ -101,10 +101,7 @@ private[finagle] trait DtabBase extends IndexedSeq[Dentry] { self: Dtab =>
    */
   def simplified: Dtab =
     Dtab({
-      val simple = self.map { entry => entry match {
-        case Dentry(prefix, dst) => Dentry(prefix, dst.simplified)
-      }}
-
+      val simple = self.map( (entry: Dentry) => entry.copy(dst = entry.dst.simplified))
       // Negative destinations are no-ops
       simple.filter(_.dst != NameTree.Neg)
     })

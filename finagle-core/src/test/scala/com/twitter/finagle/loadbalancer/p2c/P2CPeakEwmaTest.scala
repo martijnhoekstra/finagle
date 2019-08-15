@@ -7,7 +7,7 @@ import com.twitter.finagle.{ClientConnection, Service, ServiceFactory, Status}
 import com.twitter.util.{Activity, Await, Closable, Future, Time, Var}
 import org.scalatest.FunSuite
 import scala.annotation.tailrec
-import scala.collection.mutable.SortedMap
+import scala.collection.immutable.SortedMap
 
 class P2CPeakEwmaTest extends FunSuite with P2CSuite {
   override val ε: Double = 0.0005 * R
@@ -38,11 +38,11 @@ class P2CPeakEwmaTest extends FunSuite with P2CSuite {
           val svc = Await.result(bal())
           val latency = Await.result(svc((): Unit)).toLong
           val work = clock() + latency -> (schedule.getOrElse(clock() + latency, Nil) :+ svc)
-          schedule += work
+          schedule + work
         }
       for (seq <- next.get(step); c <- seq) c.close()
       clock.advance(1)
-      go(step + 1, next -= step)
+      go(step + 1, next - step)
     }
     go(0, SortedMap())
   }

@@ -1,7 +1,7 @@
 package com.twitter.finagle
 
 import scala.collection.generic.CanBuildFrom
-import scala.collection.mutable.ReusableBuilder
+import scala.collection.mutable.Builder
 import scala.collection.immutable.VectorBuilder
 /**
  * A Dtab--short for delegation table--comprises a sequence of
@@ -24,7 +24,7 @@ object Dtab extends DtabCompanionBase {
 
 }
 
-final class DtabBuilder extends ReusableBuilder[Dentry, Dtab] {
+final class DtabBuilder extends Builder[Dentry, Dtab] {
   private[this] val builder = new VectorBuilder[Dentry]
 
   def +=(d: Dentry): this.type = {
