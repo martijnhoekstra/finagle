@@ -4,8 +4,6 @@ import com.twitter.app.Flaggable
 import com.twitter.io.Buf
 import com.twitter.util.Local
 import java.io.PrintWriter
-import scala.collection.immutable.VectorBuilder
-import scala.collection.mutable.ReusableBuilder
 
 private[finagle] trait DtabBase extends IndexedSeq[Dentry] { self: Dtab =>
 

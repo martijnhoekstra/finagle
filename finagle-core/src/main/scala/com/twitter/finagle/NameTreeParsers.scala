@@ -1,7 +1,6 @@
 package com.twitter.finagle
 
 import com.twitter.io.Buf
-import scala.collection.mutable.{ArrayBuffer, Buffer}
 import scala.collection.immutable.VectorBuilder
 
 private[finagle] object NameTreeParsers {
