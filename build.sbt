@@ -598,7 +598,8 @@ lazy val finagleThrift = Project(
   id = "finagle-thrift",
   base = file("finagle-thrift")
 ).settings(
-  sharedSettings
+  sharedSettings,
+  with213
 ).settings(
   name := "finagle-thrift",
   libraryDependencies ++= scroogeLibs
@@ -650,7 +651,8 @@ lazy val finagleMux = Project(
   id = "finagle-mux",
   base = file("finagle-mux")
 ).settings(
-  sharedSettings
+  sharedSettings,
+  with213
 ).settings(
   name := "finagle-mux",
   libraryDependencies ++= Seq(
@@ -667,7 +669,8 @@ lazy val finagleThriftMux = Project(
   id = "finagle-thriftmux",
   base = file("finagle-thriftmux")
 ).settings(
-  sharedSettings
+  sharedSettings,
+  with213
 ).settings(
   name := "finagle-thriftmux",
   libraryDependencies ++= Seq(
