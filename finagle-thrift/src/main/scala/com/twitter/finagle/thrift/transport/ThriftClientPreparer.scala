@@ -7,7 +7,6 @@ import com.twitter.finagle.thrift.thrift.ConnectionOptions
 import com.twitter.util.{Future, Stopwatch}
 import org.apache.thrift.protocol.{TBinaryProtocol, TMessage, TMessageType, TProtocolFactory}
 import org.apache.thrift.transport.TMemoryInputTransport
-
 /**
  * A class to prepare a client. It adds a payload size filter and a
  * connection validation filter. If requested, it will also prepare

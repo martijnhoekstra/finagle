@@ -1,5 +1,6 @@
 package com.twitter.finagle
 
+import com.twitter.finagle
 import com.twitter.finagle.client.{ClientRegistry, StackClient, StdStackClient, Transporter}
 import com.twitter.finagle.context.Contexts
 import com.twitter.finagle.dispatch.ClientDispatcher
@@ -137,7 +138,7 @@ object Thrift
 
     val maxThriftBufferSize: Int = 16 * 1024
 
-    case class ClientId(clientId: Option[thrift.ClientId])
+    case class ClientId(clientId: Option[finagle.thrift.ClientId])
     implicit object ClientId extends Stack.Param[ClientId] {
       val default = ClientId(None)
     }
@@ -269,7 +270,7 @@ object Thrift
     def withProtocolFactory(protocolFactory: TProtocolFactory): Client =
       configured(param.ProtocolFactory(protocolFactory))
 
-    def withClientId(clientId: thrift.ClientId): Client =
+    def withClientId(clientId: finagle.thrift.ClientId): Client =
       configured(Thrift.param.ClientId(Some(clientId)))
 
     /**
@@ -303,7 +304,7 @@ object Thrift
     def withPerEndpointStats: Client =
       configured(param.PerEndpointStats(true))
 
-    def clientId: Option[thrift.ClientId] = params[Thrift.param.ClientId].clientId
+    def clientId: Option[finagle.thrift.ClientId] = params[Thrift.param.ClientId].clientId
 
     private[this] def withDeserializingClassifier: Client = {
       // Note: what type of deserializer used is important if none is specified

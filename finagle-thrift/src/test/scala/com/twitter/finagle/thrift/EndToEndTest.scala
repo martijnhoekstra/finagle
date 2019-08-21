@@ -1,6 +1,7 @@
 package com.twitter.finagle.thrift
 
 import com.twitter.conversions.DurationOps._
+import com.twitter.finagle
 import com.twitter.finagle.{Address, _}
 import com.twitter.finagle.builder.{ClientBuilder, ServerBuilder}
 import com.twitter.finagle.param.Stats
@@ -28,6 +29,7 @@ import org.apache.thrift.TApplicationException
 import org.apache.thrift.protocol.{TBinaryProtocol, TCompactProtocol, TProtocolFactory}
 import org.scalatest.{BeforeAndAfter, FunSuite}
 import scala.reflect.ClassTag
+import com.twitter.finagle.thrift.ClientId
 
 class EndToEndTest extends FunSuite with ThriftTest with BeforeAndAfter {
   var saveBase: Dtab = Dtab.empty
@@ -82,7 +84,7 @@ class EndToEndTest extends FunSuite with ThriftTest with BeforeAndAfter {
   def servers(serverParam: RichServerParam): Seq[(String, Closable, Int)] = {
     val iface = new BServiceImpl {
       override def show_me_your_dtab(): Future[String] = {
-        ClientId.current.map(_.name) match {
+        finagle.thrift.ClientId.current.map(_.name) match {
           case Some(name) => Future.value(name)
           case _ => Future.exception(missingClientIdEx)
         }

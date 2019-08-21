@@ -146,7 +146,7 @@ private[finagle] object Message {
         val v = br.readBytes(br.readIntBE())
         headers += (k -> v)
       }
-      (version.toShort, headers)
+      (version.toShort, headers.toSeq)
     }
   }
 
