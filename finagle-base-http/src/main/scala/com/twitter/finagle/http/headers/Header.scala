@@ -1,9 +1,24 @@
 package com.twitter.finagle.http.headers
 
 import scala.collection.mutable
+import scala.collection.AbstractIterator
 
 private[http] final class Header(val name: String, val value: String, var next: Header = null)
   extends HeaderMap.NameValue {
+    
+  def iterator: Iterator[HeaderMap.NameValue] =
+    if (next == null) Iterator.single(this)
+    else {
+      var cur = this
+      new AbstractIterator[HeaderMap.NameValue] {
+        def hasNext: Boolean = cur != null
+        def next(): HeaderMap.NameValue = {
+          var n = cur
+          cur = n.next
+          n
+        }
+      }
+    }
 
   def values: Seq[String] =
     if (next == null) value :: Nil
