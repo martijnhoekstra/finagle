@@ -564,7 +564,8 @@ lazy val finagleHttp = Project(
   id = "finagle-http",
   base = file("finagle-http")
 ).settings(
-  sharedSettings
+  sharedSettings,
+  withTwoThirteen
 ).settings(
   name := "finagle-http",
   libraryDependencies ++= Seq(
@@ -592,7 +593,8 @@ lazy val finagleNetty4Http = Project(
   id = "finagle-netty4-http",
   base = file("finagle-netty4-http")
 ).settings(
-  sharedSettings
+  sharedSettings,
+  withTwoThirteen
 ).settings(
   name := "finagle-netty4-http",
   libraryDependencies ++= Seq(
@@ -605,7 +607,8 @@ lazy val finagleHttp2 = Project(
   id = "finagle-http2",
   base = file("finagle-http2")
 ).settings(
-  sharedSettings
+  sharedSettings,
+  withTwoThirteen
 ).settings(
   name := "finagle-http2",
   libraryDependencies ++= Seq(
