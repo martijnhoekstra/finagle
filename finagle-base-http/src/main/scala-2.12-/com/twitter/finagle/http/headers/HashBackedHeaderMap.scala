@@ -36,13 +36,13 @@ private final class HashBackedHeaderMap extends http.HeaderMap {
   }
 
   // Validates key and value.
-  def set(key: String, value: String): HeaderMap = {
+  def set(key: String, value: String): this.type = {
     validateName(key)
     setUnsafe(key, foldReplacingValidateValue(key, value))
   }
 
   // Does not validate key and value.
-  def setUnsafe(key: String, value: String): HeaderMap = underlying.synchronized {
+  def setUnsafe(key: String, value: String): this.type = underlying.synchronized {
     underlying.set(key, value)
     this
   }
@@ -61,17 +61,17 @@ private final class HashBackedHeaderMap extends http.HeaderMap {
   def iterator: Iterator[(String, String)] = underlying.synchronized {
     underlying.flattenIterator
   }
-
+/*
   def +=(kv: (String, String)): this.type = {
     set(kv._1, kv._2)
     this
   }
+*/
 
-  def -=(key: String): this.type = underlying.synchronized {
+  def removeHeader(key: String): this.type = underlying.synchronized {
     underlying.removeAll(key)
     this
   }
-
   override def keysIterator: Iterator[String] = underlying.synchronized {
     underlying.uniqueNamesIterator
   }
